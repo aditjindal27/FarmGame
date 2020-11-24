@@ -1,0 +1,11 @@
+public class RainEvent implements FarmEvent {
+
+    @Override
+    public void occur(int[] arr) {
+        int x = (int) ((Math.random() * 2) + 2);
+        arr[0] = x;
+        for (int y = 0; y < x; y++) {
+            Player.incrementAllWaterLevels();
+        }
+    }
+}
